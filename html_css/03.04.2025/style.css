@@ -2,3 +2,26 @@
   margin: 0;
   padding: 0;
 }
+form {
+  -webkit-box-shadow: 15px 13px 22px -8px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 15px 13px 22px -8px rgba(0, 0, 0, 0.75);
+  box-shadow: 15px 13px 22px -8px rgba(0, 0, 0, 0.75);
+  display: flex;
+  flex-direction: column;
+  align-content: stretch;
+  flex-grow: 1;
+  color: white;
+  width: 1000px;
+  height: 100vh;
+}
+body {
+  background-image: url(https://ybis.ru/wp-content/uploads/2023/09/krasivyi-temnyi-fon-3.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-content: center;
+}
+
+div {
+  display: flex;
+  align-content: stretch;
+}

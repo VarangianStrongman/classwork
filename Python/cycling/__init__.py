@@ -5,5 +5,3 @@ while n<=a:
     fkt*=n
     n+=1
 print(fkt)
-
-

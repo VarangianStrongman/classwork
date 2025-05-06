@@ -5,6 +5,7 @@ len_array2 = int(input("введи длину второго списка :"))
 array1 = []
 array2 = []
 array3 = []
+num_copy = 0
 flag = True
 for i in range(len_array1):
     num = random.randint(0, 10)
@@ -26,19 +27,41 @@ for i in range(len_array2):
 for i1 in range(len_array1):
     flag = False
     flag2 = False
-    for i2 in range(i1+1,len_array1):
+    num_copy = 0
+    for i2 in range(len_array1):
         if array1[i1] == array1[i2]:
+            num_copy += 1
+        if num_copy > 1:
             flag = True
             break
     for i3 in range(len_array2):
         if array1[i1] == array2[i3]:
             flag2 = True
             break
-    if flag==False and flag2==False:
+    if flag == False and flag2 == False:
         array3.append(array1[i1])
+
+
+for i1 in range(len_array2):
+    flag = False
+    flag2 = False
+    num_copy = 0
+    for i2 in range(len_array2):
+        if array2[i1] == array2[i2]:
+            num_copy += 1
+        if num_copy > 1:
+            flag = True
+            break
+    for i3 in range(len_array1):
+        if array2[i1] == array1[i3]:
+            flag2 = True
+            break
+    if flag == False and flag2 == False:
+        array3.append(array2[i1])
+
 
 print(array1)
 print(array2)
 print(array3)
-#доделдать. так чтобы в третий массив выводились все числа которые уникальны
-#(не повторяются ни у себя ни в соседнем массиве)
+# доделдать. так чтобы в третий массив выводились все числа которые уникальны
+# (не повторяются ни у себя ни в соседнем массиве)
